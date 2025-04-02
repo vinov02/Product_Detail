@@ -75,12 +75,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false, // Removes back button
+        automaticallyImplyLeading: false,
         title: Text('Product List'),
       ),
       body: Column(
         children: [
-          // Search Bar
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: TextField(
@@ -97,7 +96,6 @@ class _HomePageState extends State<HomePage> {
               onChanged: _filterProducts,
             ),
           ),
-          // Product List
           Expanded(
             child: _buildProductList(),
           ),
@@ -163,7 +161,6 @@ class _HomePageState extends State<HomePage> {
             ),
             child: InkWell(
               onTap: () {
-                // Navigate to product details screen
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -174,7 +171,6 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Product Image
                   ClipRRect(
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(12),
@@ -206,7 +202,6 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-                  // Product Title
                   Expanded(
                     child: Padding(
                       padding: EdgeInsets.all(16),
